@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+
+message Error {
+    string message = 1;
+}
+
+message Empty {
+    repeated Error errors = 1;
+}
+
+message Pong {
+    repeated Error errors = 1;
+    double timestamp = 2;
+}
+
+message CalculationInputs {
+    uint32 x = 1;
+    string msg = 2;
+}
+
+service Main {
+    rpc Start(Empty) returns (Empty);
+    rpc Stop(Empty) returns (Empty);
+    rpc Terminate(Empty) returns (Empty);
+    rpc Ping(Empty) returns (Pong);
+    rpc Calculate(CalculationInputs) returns (Empty);
+}

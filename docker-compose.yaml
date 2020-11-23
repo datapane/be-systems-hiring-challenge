@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+  client:
+    image: datapane-client
+    container_name: datapane-client
+    build:
+      dockerfile: Dockerfile.client
+      context: .
+    environment:
+      HOST: "0.0.0.0"
+      PORT: "445566"
+      PYTHONUNBUFFERED: 1
+    # Publish to access from outside docker networ 
+    expose:
+      - "445566"
+  server:
+    image: datapane-server
+    container_name: datapane-server
+    build:
+      dockerfile: Dockerfile.server
+      context: .
+    depends_on:
+      - client
+    environment:
+      HOST: "client"
+      PORT: "445566"
+      PYTHONUNBUFFERED: 1
+    stdin_open: true
+    # tty doesn't work with up (?)
+    # tty: true
