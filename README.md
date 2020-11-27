@@ -32,4 +32,5 @@ If you want to connect to client via your host machine, run following,
 2. python master.py
 
 You can have a look at command execution,
-![click to see](./Screenshot 2020-11-28 at 2.49.54 AM.png)
+
+![click to see](Screenshot.png)
