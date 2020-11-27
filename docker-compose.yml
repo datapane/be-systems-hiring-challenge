@@ -1,0 +1,8 @@
+version: '2'
+services:
+  client-server-thrift3:
+    build: .
+    image: client-server-thrift3:latest
+    restart: always
+    ports:
+      - 6000:6000
