@@ -1,0 +1,22 @@
+version: "3"
+services:
+  client:
+    image: datapane-challenge-client
+    container_name: datapane-challenge-client
+    build:
+      context: ./client  # Docker context from folder of this file; needed to include requirement.txt
+      dockerfile: Dockerfile
+
+    # stdin_open: true  # same as docker -i (interactive)
+    tty: true  # same as docker -t (tty); see if client actually receives server messages
+    command: ["python", "main.py", "--ip", "0.0.0.0"]  # client module binds, so no need for a specific IP
+  
+  server:
+    image: datapane-challenge-server
+    container_name: datapane-challenge-server
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    # stdin_open: true  # same as docker -i (interactive)
+    tty: true  # same as docker -t (tty); see if server actually publishes messages to client
+    #command: ["python", "main.py", "--ip", "client"]  # server module connects, therefore client Docker IP needed

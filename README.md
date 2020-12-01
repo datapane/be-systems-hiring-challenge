@@ -1,3 +1,24 @@
+# Solution
+
+## Description
+
+For the implementation of the challenge, two containers were created: one for the server and one for the client. Zeromq was used for the communication, with which two sockets were created (one for each direction) and filled with JSON messages. The method for queue access selected was PUSH/PULL in order to achieve asynchronous communication.
+
+![Interaction diagram](./commands.svg)
+
+## Instructions
+
+To simplify the interactions with the containers the use of controls.sh is advized
+
+### Usage of controls.sh
+In the terminal, type `bash controls.sh` and then one of the following commands:
+	  `start`: builds and starts the docker containers
+	  `goto_server`: executes the server script and provides the user with the ability to interact with the system
+	  `stop` 	   : terminates the containers
+	  `cleanup`    : removes the client and server images
+	  `help`	   : show this message
+
+
 # Backend Python/Linux Systems Hiring Challenge
 
 # Introduction
