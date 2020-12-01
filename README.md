@@ -12,11 +12,11 @@ To simplify the interactions with the containers the use of controls.sh is advis
 
 ### Usage of controls.sh
 In the terminal, type `bash controls.sh` and then one of the following commands:
-	  `start`: builds and starts the docker containers
-	  `goto_server`: executes the server script and provides the user with the ability to interact with the system
-	  `stop` 	   : terminates the containers
-	  `cleanup`    : removes the client and server images
-	  `help`	   : show this message
+	  `start`: builds and starts the docker containers  
+	  `goto_server`: executes the server script and provides the user with the ability to interact with the system  
+	  `stop` 	   : terminates the containers  
+	  `cleanup`    : removes the client and server images  
+	  `help`	   : show this message  
 
 
 # Backend Python/Linux Systems Hiring Challenge
