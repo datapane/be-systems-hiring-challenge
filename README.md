@@ -8,7 +8,7 @@ For the implementation of the challenge, two containers were created: one for th
 
 ## Instructions
 
-To simplify the interactions with the containers the use of controls.sh is advized
+To simplify the interactions with the containers the use of controls.sh is advised
 
 ### Usage of controls.sh
 In the terminal, type `bash controls.sh` and then one of the following commands:
